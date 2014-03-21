@@ -16,10 +16,12 @@
 include device/moto/wingray/BoardConfig.mk
 
 # Kernel
-BOARD_KERNEL_CMDLINE := product_type=clw
+BOARD_KERNEL_CMDLINE := product_type=cw
 
 # RIL
-BOARD_RIL_CLASS := "../../../vendor/moto/stingray_cdma/proprietary/"
+BOARD_USES_HC_RADIO := true
+BOARD_USES_LEGACY_RIL := true
 
 # Bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/moto/everest/bluetooth/vnd_stingray_cdma.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/moto/stingray_cdma/bluetooth
