@@ -23,5 +23,5 @@ BOARD_USES_HC_RADIO := true
 BOARD_USES_LEGACY_RIL := true
 
 # Bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/moto/everest/bluetooth/vnd_stingray_cdma.txt
+BOARD_BLUEDROID_VENDOR_CONF := device/moto/stingray_cdma/bluetooth/vnd_stingray_cdma.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/moto/stingray_cdma/bluetooth
