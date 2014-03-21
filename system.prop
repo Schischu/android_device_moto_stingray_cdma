@@ -1,0 +1,39 @@
+
+
+
+# Point to RIL
+rild.libpath=/system/lib/libmoto_ril.so
+rild.libargs=-d /dev/chnlat10
+persist.ril.mux.ttydevice=/dev/usb/tty2-1:1.2
+# Increase # channels to 10 to allow M2M communication
+# Keep 8 for umts
+persist.ril.mux.noofchannels=8
+persist.ril.modem.mode=1
+# Enable ALWAYS_READ_IMSI_FROM_SIM
+persist.ril.features=0x34
+persist.ril.modem.ttydevice=/dev/usb/tty2-1:1.4
+persist.ril.tcmd.ttydevice=/dev/usb/tty2-1:1.3
+ro.cdma.home.operator.numeric=310004
+ro.cdma.home.operator.alpha=Verizon
+ro.cdma.homesystem=64,65,76,77,78,79,80,81,82,83
+ro.cdma.data_retry_config=default_randomization=2000,0,0,120000,180000,540000,960000
+# Leave default mode to 4 (CDMA) but need it to be Global (7) for LTE/CDMA
+ro.telephony.default_network=4
+ro.telephony.call_ring.multiple=false
+ro.ril.ntmodeglobal=true
+ro.telephony.ril.v3=signalstrength,skipbrokendatacall,writeaidonly
+
+# Render UI with GPU
+debug.sf.hw=1
+
+# Screenshot fix
+ro.bq.gpu_to_cpu_unsupported=1
+
+# UA profile
+ro.mot.hw.uaprof=http://uaprof.motorola.com/phoneconfig/motomz601/Profile/motomz601.rdf
+
+# BP flex version
+ro.build.bp.config.version=UCAEVEUB1B8EU03F.0R
+
+# Google use the system property to control if allow device to be unlock without SIM
+keyguard.no_require_sim=true
